@@ -12,7 +12,7 @@ namespace PassthroughCameraSamples.MultiObjectDetection.Editor
     [CustomEditor(typeof(SentisInferenceRunManager))]
     public class SentisModelEditorConverter : UnityEditor.Editor
     {
-        private const string FILEPATH = "Assets/PassthroughCameraApiSamples/MultiObjectDetection/SentisInference/Model/yolov9sentis.sentis";
+        private const string FILEPATH = "Assets/PassthroughCameraApiSamples/MultiObjectDetection/SentisInference/Model/sentis-brf.sentis";
         private SentisInferenceRunManager m_targetClass;
         private float m_iouThreshold;
         private float m_scoreThreshold;
@@ -53,12 +53,19 @@ namespace PassthroughCameraSamples.MultiObjectDetection.Editor
             };
             var centersToCorners = FF.Constant(new TensorShape(4, 4), centersToCornersData);
             var modelOutput = FF.Forward(model, input)[0];  //shape(1,N,85)
+
             // Following for yolo model. in (1, 84, N) out put shape
+
             var boxCoords = modelOutput[0, ..4, ..].Transpose(0, 1);
             var allScores = modelOutput[0, 4.., ..].Transpose(0, 1);
             var scores = FF.ReduceMax(allScores, 1);    //shape=(N)
             var classIDs = FF.ArgMax(allScores, 1); //shape=(N)
+
+
             var boxCorners = FF.MatMul(boxCoords, centersToCorners);    //shape=(N,4)
+
+            
+
             var indices = FF.NMS(boxCorners, scores, m_iouThreshold, m_scoreThreshold); //shape=(N)
             var indices2 = indices.Unsqueeze(-1).BroadcastTo(new[] { 4 });  //shape=(N,4)
             var labelIDs = FF.Gather(classIDs, 0, indices); //shape=(N)

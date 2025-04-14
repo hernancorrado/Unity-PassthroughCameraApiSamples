@@ -12,18 +12,18 @@ namespace PassthroughCameraSamples.MultiObjectDetection
     public class SentisInferenceRunManager : MonoBehaviour
     {
         [Header("Sentis Model config")]
-        [SerializeField] private Vector2Int m_inputSize = new(640, 640);
+        [SerializeField] private Vector2Int m_inputSize = new(640, 640); // 416 416
         [SerializeField] private BackendType m_backend = BackendType.CPU;
-        [SerializeField] private ModelAsset m_sentisModel;
-        [SerializeField] private int m_layersPerFrame = 25;
-        [SerializeField] private TextAsset m_labelsAsset;
+        [SerializeField] private ModelAsset m_sentisModel; // new
+        [SerializeField] private int m_layersPerFrame = 25; // 39
+        [SerializeField] private TextAsset m_labelsAsset; // labels
         public bool IsModelLoaded { get; private set; } = false;
 
         [Header("UI display references")]
         [SerializeField] private SentisInferenceUiManager m_uiInference;
 
         [Header("[Editor Only] Convert to Sentis")]
-        public ModelAsset OnnxModel;
+        public ModelAsset OnnxModel; // ONNX
         [SerializeField, Range(0, 1)] private float m_iouThreshold = 0.6f;
         [SerializeField, Range(0, 1)] private float m_scoreThreshold = 0.23f;
         [Space(40)]
