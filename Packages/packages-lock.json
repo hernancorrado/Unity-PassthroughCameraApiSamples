@@ -210,7 +210,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.sentis": {
-      "version": "2.1.1",
+      "version": "2.1.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -268,7 +268,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ugui": {
-      "version": "1.0.0",
+      "version": "2.0.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
