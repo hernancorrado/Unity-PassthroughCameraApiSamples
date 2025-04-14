@@ -1646,13 +1646,33 @@ PrefabInstance:
       propertyPath: OnObjectsDetected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6846995557286463107}
+    - target: {fileID: 2681575481727882275, guid: 927c1b782bb796b4b9b433d533cbccca, type: 3}
+      propertyPath: OnnxModel
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 57c5cddd28f2ba24a9ee9547dce713b9, type: 3}
+    - target: {fileID: 2681575481727882275, guid: 927c1b782bb796b4b9b433d533cbccca, type: 3}
+      propertyPath: m_inputSize.x
+      value: 416
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681575481727882275, guid: 927c1b782bb796b4b9b433d533cbccca, type: 3}
+      propertyPath: m_inputSize.y
+      value: 416
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681575481727882275, guid: 927c1b782bb796b4b9b433d533cbccca, type: 3}
+      propertyPath: m_labelsAsset
+      value: 
+      objectReference: {fileID: 4900000, guid: 0f42cf1337e561349942655ed909e760, type: 3}
+    - target: {fileID: 2681575481727882275, guid: 927c1b782bb796b4b9b433d533cbccca, type: 3}
+      propertyPath: m_sentisModel
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: cab44d595927c044d9bfe142f37e66df, type: 3}
     - target: {fileID: 4976470222712890361, guid: 927c1b782bb796b4b9b433d533cbccca, type: 3}
       propertyPath: m_webCamTextureManager
       value: 
       objectReference: {fileID: 1373946501}
     - target: {fileID: 5228241647023865434, guid: 927c1b782bb796b4b9b433d533cbccca, type: 3}
       propertyPath: m_Name
-      value: SentisInferenceManagerPrefab
+      value: _SentisInferenceManagerPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 7913708705614608778, guid: 927c1b782bb796b4b9b433d533cbccca, type: 3}
       propertyPath: m_LocalPosition.x
