@@ -121,7 +121,10 @@ namespace PassthroughCameraSamples.MultiObjectDetection
         #region Ui state: detection information
         private void UpdateLabelInformation()
         {
-            m_labelInfromation.text = $"Unity Sentis version: 2.1.1\nAI model: Yolo\nDetecting objects: {m_objectsDetected}\nObjects identified: {m_objectsIdentified}";
+            m_labelInfromation.text = $"Unity Sentis version: 2.1.2\n" +
+                $"Model Version: {Application.version}\n" +
+                $"Detecting objects: {m_objectsDetected}\n" +
+                $"Objects identified: {m_objectsIdentified}";
         }
 
         public void OnObjectsDetected(int objects)

@@ -1144,7 +1144,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Unity Sentis version: 2.1.1\nAI model: Yolo \nDetecting objects: 0\nObject
+  m_Text: "Unity Sentis version: 2.1.2\nAI model: Yolo \nDetecting objects: 0\nObject
     identified: 0"
 --- !u!1 &5069367858732599368
 GameObject:
@@ -1767,7 +1767,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8722207748505512708
 MonoBehaviour:
   m_ObjectHideFlags: 0

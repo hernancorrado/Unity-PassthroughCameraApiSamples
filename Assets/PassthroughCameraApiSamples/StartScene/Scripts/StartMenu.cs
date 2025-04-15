@@ -45,7 +45,7 @@ namespace PassthroughCameraSamples.StartScene
             var uiBuilder = DebugUIBuilder.Instance;
             if (passthroughScenes.Count > 0)
             {
-                _ = uiBuilder.AddLabel("Passthrough Sample Scenes", DebugUIBuilder.DEBUG_PANE_LEFT);
+                _ = uiBuilder.AddLabel("MENU", DebugUIBuilder.DEBUG_PANE_LEFT);
                 foreach (var scene in passthroughScenes)
                 {
                     _ = uiBuilder.AddButton(Path.GetFileNameWithoutExtension(scene.Item2), () => LoadScene(scene.Item1), -1, DebugUIBuilder.DEBUG_PANE_LEFT);
@@ -65,7 +65,7 @@ namespace PassthroughCameraSamples.StartScene
             if (generalScenes.Count > 0)
             {
                 _ = uiBuilder.AddDivider(DebugUIBuilder.DEBUG_PANE_CENTER);
-                _ = uiBuilder.AddLabel("Sample Scenes", DebugUIBuilder.DEBUG_PANE_CENTER);
+                _ = uiBuilder.AddLabel("Home Scenes", DebugUIBuilder.DEBUG_PANE_CENTER);
                 foreach (var scene in generalScenes)
                 {
                     _ = uiBuilder.AddButton(Path.GetFileNameWithoutExtension(scene.Item2), () => LoadScene(scene.Item1), -1, DebugUIBuilder.DEBUG_PANE_CENTER);

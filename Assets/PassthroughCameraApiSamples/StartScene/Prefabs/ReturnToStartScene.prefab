@@ -92,7 +92,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073883201896451684}
-  m_Text: "Press MENU to go back \nto Samples Selection"
+  m_Text: Press MENU to go back.
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -105,7 +105,7 @@ TextMesh:
   m_Font: {fileID: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278247423
 --- !u!1 &2073883202203575103
 GameObject:
   m_ObjectHideFlags: 0
