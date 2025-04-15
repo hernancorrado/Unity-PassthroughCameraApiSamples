@@ -99,6 +99,82 @@ namespace PassthroughCameraSamples.MultiObjectDetection
         private void LoadModel()
         {
             //Load model
+            var model = ModelLoader.Load(m_sentisModel); // SENTIS
+
+            Debug.Log($"Sentis model loaded correctly with iouThreshold: {m_iouThreshold} and scoreThreshold: {m_scoreThreshold}");
+            //Create engine to run model
+            m_engine = new Worker(model, m_backend);
+            //Run a inference with an empty input to load the model in the memory and not pause the main thread.
+
+
+            //
+            //
+            //
+
+            var texture = new Texture2D(m_inputSize.x, m_inputSize.y);
+
+            // var inputRGB = TextureConverter.ToTensor(texture, m_inputSize.x, m_inputSize.y, 3); // Original RGB
+
+            var textureTransform = new TextureTransform();
+
+            textureTransform.SetDimensions(m_inputSize.x, m_inputSize.y, 3);
+            textureTransform.SetChannelSwizzle(ChannelSwizzle.BGRA);
+
+
+            var inputBGR = TextureConverter.ToTensor(texture, textureTransform);
+
+
+
+            m_engine.Schedule(inputBGR);
+
+            IsModelLoaded = true;
+
+        }
+
+
+        /*
+            public static Texture2D CopyTextureToReadable(Texture source)
+            {
+                int width = source.width;
+                int height = source.height;
+
+                RenderTexture rt = RenderTexture.GetTemporary(width, height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Default);
+                Graphics.Blit(source, rt);
+
+                RenderTexture.active = rt;
+                Texture2D readableTex = new Texture2D(width, height, TextureFormat.RGB24, false);
+                readableTex.ReadPixels(new Rect(0, 0, width, height), 0, 0);
+                readableTex.Apply();
+
+                RenderTexture.active = null;
+                RenderTexture.ReleaseTemporary(rt);
+
+                return readableTex;
+            }
+
+            public static Texture2D ConvertRGBtoBGR(Texture2D source)
+            {
+                Texture2D copy = new Texture2D(source.width, source.height, TextureFormat.RGB24, false);
+                Color[] pixels = source.GetPixels();
+
+                for (int i = 0; i < pixels.Length; i++)
+                {
+                    Color c = pixels[i];
+                    pixels[i] = new Color(c.b, c.g, c.r); // Invertir R y B
+                }
+
+                copy.SetPixels(pixels);
+                copy.Apply();
+                return copy;
+            }
+
+        */
+
+
+        /*
+        private void LoadModel()
+        {
+            //Load model
             var model = ModelLoader.Load(m_sentisModel);
             Debug.Log($"Sentis model loaded correctly with iouThreshold: {m_iouThreshold} and scoreThreshold: {m_scoreThreshold}");
             //Create engine to run model
@@ -108,6 +184,8 @@ namespace PassthroughCameraSamples.MultiObjectDetection
             m_engine.Schedule(input);
             IsModelLoaded = true;
         }
+        */
+
 
         private void InferenceUpdate()
         {
@@ -244,4 +322,5 @@ namespace PassthroughCameraSamples.MultiObjectDetection
         }
         #endregion
     }
+
 }
