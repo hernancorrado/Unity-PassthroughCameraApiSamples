@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/Detection 60-70.unity
     guid: 20c230cce46443841b5727b1d6100bfc
+  - enabled: 1
+    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/Detection v9 (60-70).unity
+    guid: a92d56debfb675f4181f05ab66faa042
+  - enabled: 1
+    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/Detection v11 (60-70).unity
+    guid: 435ed6e6f084abf448b1cc247ba30765
   - enabled: 0
     path: Assets/PassthroughCameraApiSamples/ShaderSample/ShaderSample.unity
     guid: 708e8dca6055146b28afe2481f141457
