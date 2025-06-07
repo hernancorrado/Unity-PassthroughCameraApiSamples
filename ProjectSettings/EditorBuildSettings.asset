@@ -17,21 +17,36 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/PassthroughCameraApiSamples/BrightnessEstimation/BrightnessEstimation.unity
     guid: 8ea13e682474e1748965f8e21972f2b2
-  - enabled: 1
-    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/Detection 40-45.unity
+  - enabled: 0
+    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/Detection 45-40.unity
     guid: f05355f8fbbdd2b4d960146aee36bee5
-  - enabled: 1
-    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/Detection 60-70.unity
+  - enabled: 0
+    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/Detection 70-60.unity
     guid: 20c230cce46443841b5727b1d6100bfc
-  - enabled: 1
-    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/Detection v9 (60-70).unity
+  - enabled: 0
+    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/v9 (70-60).unity
     guid: a92d56debfb675f4181f05ab66faa042
-  - enabled: 1
-    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/Detection v11 (60-70).unity
+  - enabled: 0
+    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/v11 (70-60).unity
     guid: 435ed6e6f084abf448b1cc247ba30765
+  - enabled: 1
+    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/Detection Demo.unity
+    guid: abf5e11a373d78245a8d4118eb87f347
   - enabled: 0
     path: Assets/PassthroughCameraApiSamples/ShaderSample/ShaderSample.unity
     guid: 708e8dca6055146b28afe2481f141457
+  - enabled: 1
+    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/v11n (iou45-40).unity
+    guid: 16255c6136346a740bfb234a2c0d6027
+  - enabled: 1
+    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/v11n (iou70-60).unity
+    guid: dc3bccf45f7987442abc5d1b455e0388
+  - enabled: 1
+    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/v11s v2 (iou50-35).unity
+    guid: 5a7b6ef576e9aae419eacb3439c070b1
+  - enabled: 1
+    path: Assets/PassthroughCameraApiSamples/MultiObjectDetection/v11s v3 (iou50-23).unity
+    guid: 8da0df3f94497254692a944f42ff1c87
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f2bf97b3acdb64248a707c407c9fc54e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a971eac5e950046e586c5e153e32d05c, type: 2}
